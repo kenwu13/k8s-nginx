@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: ezwildfly
-        image: lab-harbor.eztravel.com.tw/hotel-project/test-ezwildfly:v1
+        image: https://10.248.220.81:5000/hotel-project/test-ezwildfly:v1
         ports:
         - containerPort: 8080
         resources:
