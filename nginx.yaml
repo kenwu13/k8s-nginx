@@ -2,19 +2,19 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: nginx-deployment
+  name: ken-nginx-deployment
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: nginx
+      app: ken-nginx
   template:
     metadata:
       labels:
-        app: nginx
+        app: ken-nginx
     spec:
       containers:
-      - name: nginx
+      - name: ken-nginx
         image: nginx:latest
         ports:
         - containerPort: 80
@@ -31,10 +31,10 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: nginx-service
+  name: ken-nginx-service
 spec:
   selector:
-    app: nginx
+    app: ken-nginx
   ports:
   - port: 80
     targetPort: 80
