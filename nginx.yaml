@@ -18,3 +18,24 @@ spec:
         image: nginx:latest
         ports:
         - containerPort: 80
+		resources:
+          requests:
+            cpu: "100m"
+            memory: "512Mi"
+          limits:
+            cpu: "300m"
+            memory: "1024Mi"
+
+---
+# service.yaml
+apiVersion: v1
+kind: Service
+metadata:
+  name: nginx-service
+spec:
+  selector:
+    app: nginx
+  ports:
+  - port: 80
+    targetPort: 80
+  type: ClusterIP
