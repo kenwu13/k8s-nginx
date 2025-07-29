@@ -1,0 +1,10 @@
+resources:
+  - ../../base
+
+namespace: ken-dev
+
+namePrefix: dev-
+
+replicas:
+  - name: nginx-deploy
+    count: 1

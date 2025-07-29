@@ -1,0 +1,10 @@
+resources:
+  - ../../base
+
+namespace: ken-prod
+
+namePrefix: prod-
+
+replicas:
+  - name: nginx-deploy
+    count: 3

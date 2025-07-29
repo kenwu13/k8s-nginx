@@ -1,0 +1,10 @@
+resources:
+  - ../../base
+
+namespace: ken-ws
+
+namePrefix: ws-
+
+replicas:
+  - name: nginx-deploy
+    count: 2
