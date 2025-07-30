@@ -12,6 +12,6 @@ spec:
     targetRevision: main
   destination:
     server: https://kubernetes.default.svc
-    namespace: ken-test
+    namespace: ken-dev
   syncPolicy:
     automated: {}
