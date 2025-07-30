@@ -3,6 +3,7 @@ apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
   name: nginx-lab
+  namespace: argocd
   annotations:
     notifications.argoproj.io/subscribe.on-sync-status-change.slack: "true"
 spec:
