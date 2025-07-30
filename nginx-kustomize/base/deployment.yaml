@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: ken-nginx
-        image: nginx:latest
+        image: nginx:1.25
         ports:
         - containerPort: 80
         resources:
@@ -23,5 +23,5 @@ spec:
             cpu: "100m"
             memory: "512Mi"
           limits:
-            cpu: "300m"
+            cpu: "500m"
             memory: "1024Mi"
