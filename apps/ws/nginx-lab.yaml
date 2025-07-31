@@ -2,7 +2,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: dev-nginx-lab
+  name: ws-nginx-lab
   namespace: argocd
   annotations:
     notifications.argoproj.io/subscribe.on-sync-status-change.slack: "true"
@@ -10,10 +10,10 @@ spec:
   project: default
   source:
     repoURL: https://github.com/kenwu13/k8s-nginx
-    path: nginx-kustomize/overlays/dev
+    path: nginx-kustomize/overlays/ws
     targetRevision: main
   destination:
     server: https://kubernetes.default.svc
-    namespace: ken-dev
+    namespace: ken-ws
   syncPolicy:
     automated: {}
