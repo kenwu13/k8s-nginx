@@ -3,7 +3,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: nginx-deploy
-  namespace: ken-lab
+  namespace: hotel
 spec:
   replicas: 1
   selector:
@@ -33,7 +33,7 @@ apiVersion: v1
 kind: Service
 metadata:
   name: nginx-svc
-  namespace: ken-lab
+  namespace: hotel
 spec:
   selector:
     app: lab-nginx
