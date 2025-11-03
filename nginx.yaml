@@ -19,6 +19,9 @@ spec:
         image: nginx:latest
         ports:
         - containerPort: 80
+        env: # <--- 在這裡新增環境變數
+        - name: TZ
+          value: Asia/Taipei
         resources:
           requests:
             cpu: "100m"
