@@ -1,0 +1,21 @@
+# ingress.yaml
+apiVersion: v1
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: nginx-ingress
+  namespace: hotel1
+#  annotations:
+#    kubernetes.io/ingress.class: nginx
+spec:
+  rules:
+  - host: hotel1-test.eztravel.com.tw # <-- 請替換為您的實際網域
+    http:
+      paths:
+      - path: /
+        pathType: Prefix # Prefix 允許匹配該路徑及其子路徑
+        backend:
+          service:
+            name: nginx-svc
+            port:
+              number: 80
